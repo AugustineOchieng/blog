@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+    <head>
+        <title>Django Central</title>
+        
+
+        
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%} ">
+        <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
+
+        <!-- Main Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <!--Favicon-->
+        <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    </head>
+    <section class="d-flex">
+    <body style="overflow: scroll" >
+       <!-- start of sidenav -->
+<aside><div class="sidenav position-sticky d-flex flex-column justify-content-between">
+    <a class="navbar-brand" href="index.html" class="logo">
+        <img src=" {% static 'images/logo.png' %} " alt="">
+    </a>
+    <!-- end of navbar-brand -->
+
+    <div class="navbar navbar-dark my-4 p-0 font-primary">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item active">
+                <a class="nav-link text-white px-0 pt-0" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white px-0" href="{% url 'home' %}">About</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white px-0" href="{% url 'home' %}">Contact</a>
+            </li>
+            <li class="nav-item  accordion">
+                <div id="drop-menu" class="drop-menu collapse">
+                    <a class="d-block " href="index-2.html">Home 2</a>
+                    <a class="d-block " href="category.html">Category</a>
+                    <a class="d-block " href="post-details.html">Post Details</a>
+                    <a class="d-block " href="privacy.html">Privacy &amp; Policy</a>
+                </div>
+                <a class="nav-link text-white" href="#!" role="button" data-toggle="collapse" data-target="#drop-menu" aria-expanded="false" aria-controls="drop-menu">Pages</a>
+            </li>
+            <li class="nav-item mt-3">
+                <select class="custom-select bg-transparent rounded-0 text-white shadow-none" id="pick-lang">
+                    <option selected value="en">English</option>
+                    <option value="fr">French</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <!-- end of navbar -->
+
+    <ul class="list-inline nml-2">
+        <li class="list-inline-item">
+            <a href="#!" class="text-white text-red-onHover pr-2">
+                <span class="fab fa-twitter"></span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="#!" class="text-white text-red-onHover p-2">
+                <span class="fab fa-facebook-f"></span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="#!" class="text-white text-red-onHover p-2">
+                <span class="fab fa-instagram"></span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a href="#!" class="text-white text-red-onHover p-2">
+                <span class="fab fa-linkedin-in"></span>
+            </a>
+        </li>
+    </ul>
+    <!-- end of social-links -->
+</div></aside>
+<!-- end of sidenav -->
+
+
+    {% block content %}
+        <!-- Content Goes here -->
+    {% endblock content %}
+
+    <!-- Footer -->
+    <footer class="py-3 bg-grey">
+        <p class="m-0 text-dark text-center ">Copyright &copy; Django Central</p>
+    </footer>
+    <!-- bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+</section>
+
+
+
+
+</html>
