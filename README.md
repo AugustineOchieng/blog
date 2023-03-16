@@ -1,7 +1,7 @@
-# Blogger
+# Blog
 
-Blogger is a flask application providing acces to  an unmatchable variety
- of content and logged in users have an option of adding blog posts
+Blog is a python django application providing acces to  an unmatchable variety
+ of content and  users have an option of interacting and commenting on posts
 
  ## Author
 [Augustine Ochieng](https://github.com/AugustineOchieng)
@@ -29,6 +29,7 @@ The different technologies that were used to develop this program include:
 4. CSS
 5. Postgresql
 6. MDBootstrap
+7. Javascript
 ```
 
 ### Link to live site
